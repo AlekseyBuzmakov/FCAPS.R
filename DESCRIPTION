@@ -1,0 +1,13 @@
+Package: FCAPS.R
+Type: Package
+Title: A tool for preparation of the data for FCAPS software
+Version: 0.1.0
+Author: Aleksey Buzmakov
+Maintainer: Aleksey Buzmakov <avbuzmakov@hse.ru>
+Description: The tool convert data to differnt formats of FCAPS software
+Depends: jsonlite
+Imports:
+	jsonlite
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
