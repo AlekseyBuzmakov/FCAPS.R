@@ -50,7 +50,7 @@ scale.to.bin.data = function(x,nQuantiles = 3) {
         breaks=sort(unique(col))
         breaks=(breaks[-length(breaks)]+breaks[-1])/2.0
       } else {
-        breaks = unique(quantile(col,probs = seq(0,to=1,length.out = nQuantiles+1)))
+        breaks = unique(quantile(col,probs = seq(1/nQuantiles,to=1 - 1/nQuantiles,length.out = nQuantiles-1)))
       }
       for(i in breaks){
         if( i != max(breaks)){
