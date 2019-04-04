@@ -1,3 +1,4 @@
+
 #' Converting data to binary table
 #'
 #' The function binarize data in requested number of quantiles
@@ -7,11 +8,12 @@
 #' @param nQuantiles the number of quantiles for binarization
 #'
 #' @return the new data.frame with binary values
+#'
 #' @export
 #'
 #' @examples
 #'
-scale.to.bin.data = function(x,nQuantiles = 3) {
+contextToBinData = function(x,nQuantiles = 3) {
   result=NULL
   nms=NULL
   for(col.name in names(x)) {
