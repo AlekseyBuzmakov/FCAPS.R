@@ -68,6 +68,7 @@ contextToBinData = function(x,nQuantiles = 3) {
   }
   colnames(result)=nms
   result[is.na(result)]=F
+  rownames(result) = names(x)
   return(result)
 }
 
@@ -83,7 +84,7 @@ contextToBinData = function(x,nQuantiles = 3) {
 toFCAPSJson = function(db, file) {
   # And write the header
   cat(file=file, paste0(
-    '[{"Params":{"AttrNames":',
+    '[{"ObjNames":',jsonlite::toJSON(rownames(db)),',\n"Params":{"AttrNames":',
     jsonlite::toJSON(colnames(db)),
     '}},{"Data":[\n',
     # and the body of the file
