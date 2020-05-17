@@ -18,7 +18,7 @@ contextToBinData = function(x,nQuantiles = 3) {
   nms=NULL
   for(col.name in names(x)) {
     col=x[[col.name]]
-    if(length(unique(col)) <= 20) {
+    if(!is.factor(col) && length(unique(col)) <= 20) {
       is.ord = is.numeric(col)
       col = factor(col,ordered = is.ord)
     }
