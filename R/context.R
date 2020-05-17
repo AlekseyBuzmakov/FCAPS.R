@@ -68,7 +68,7 @@ contextToBinData = function(x,nQuantiles = 3) {
   }
   colnames(result)=nms
   result[is.na(result)]=F
-  rownames(result) = names(x)
+  rownames(result) = rownames(x)
   return(result)
 }
 
